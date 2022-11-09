@@ -1,0 +1,20 @@
+<div class="card mb-3">
+    <div class="card-header d-flex">
+        <div class="container-fluid">
+            {{structure.StructureName}}
+        </div>
+        <div>
+            <button type="button" class="btn-close" (click)="deleteCart()" aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">{{structure.StructureDescription}}</p>
+            <p class="card-text"><small class="text-muted">Cantidad:  
+                <button class="btn btn-secondary my-2 my-sm-0" (click)="removeProduct()">-</button>
+                <button class="btn btn-secondary my-2 my-sm-0 disabled">{{cart.CountProduct}}</button>
+                <button class="btn btn-secondary my-2 my-sm-0" (click)="addProduct()">+</button></small></p>
+        </div>
+    </div>
+</div>

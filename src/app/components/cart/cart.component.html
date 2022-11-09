@@ -1,0 +1,6 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <app-total *ngIf="list.length > 0"></app-total>
+    <app-cart-item *ngFor="let cart of list" [cart]="cart" ></app-cart-item>
+    <app-total *ngIf="list.length > 2"></app-total>
+</div>

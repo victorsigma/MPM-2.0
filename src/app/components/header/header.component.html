@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarColor03" aria-controls="navbarColor03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/wiki">Wiki</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/expansions">Expanciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/live">En Vivo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/rules">Reglas</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex" *ngIf="isLogin == false">
+                <li class="nav-item">
+                    <button class="btn btn-secondary my-2 my-sm-0" aria-current="page"
+                        href="" data-bs-toggle="modal"
+                        data-bs-target="#registerModal" type="button">Register</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-secondary my-2 my-sm-0" href="" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Login</button>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex" *ngIf="isLogin == true">
+                <li class="nav-item">
+                    <button class="btn btn-secondary my-2 my-sm-0" aria-current="page"
+                    routerLink="/" (click)="logout()">Logout</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-secondary my-2 my-sm-0" aria-current="page"
+                    routerLink="/cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i> {{cartLenght}}
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button style="
+                            background: url(http://localhost:4200/assets/img/{{user.UserIcon}}.jpg);
+                            background-repeat: no-repeat;
+                            background-size: 60px 60px;
+                            color: transparent;
+                        " 
+                        class="btn btn-secondary my-2 my-sm-0 btn-img" routerLink="/account">-</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<app-login-modal (loginDate)="loginDate()"></app-login-modal>
+<app-register-modal></app-register-modal>

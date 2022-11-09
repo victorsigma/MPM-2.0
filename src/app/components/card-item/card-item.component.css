@@ -1,0 +1,15 @@
+.card-aling {
+    padding: 1em;
+    margin: 1em;
+    float: left;
+}
+
+.text-subtitle {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn-cent {
+    text-align: center;
+}
