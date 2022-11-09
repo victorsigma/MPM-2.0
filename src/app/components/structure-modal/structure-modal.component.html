@@ -1,0 +1,36 @@
+<div class="modal" id="structureModal" tabindex="-1"
+aria-labelledby="structureModalLabe1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{structures.getStructureMoData().StructureName}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="addCart()">
+                    <div class="mb-3 form-group">
+                        <label class="form-label">Descripcion</label>
+                        <textarea class="form-control"
+                            id="descriptionStructure" rows="2" readonly value="{{structures.getStructureMoData().StructureDescription}}"></textarea>
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Precio</label>
+                        <input type="text" class="form-control" id="StructurePrice" readonly value="${{structures.getStructureMoData().StructurePrice.toFixed(2)}}">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Cantidad</label>
+                        <select formControlName="count" class="form-select" aria-label="Disabled select example">
+                            <option selected *ngFor="let item of [].constructor(structures.getStructureMoData().Stock);let i= index" value="{{i+1}}">{{i+1}}</option>
+                        </select>
+                    </div>
+                    <div class="list-group">
+                        <button type="submit" class="btn button-login" data-bs-dismiss="modal">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="card-aling card-center">
+    <div class="card" style="width: 18rem;">
+        <img src="./assets/img/structure_decks/{{structure.StructureId}}.jpg"
+            class="card-img-top" alt="..." height="250" width="100">
+        <div class="card-body">
+            <h6 class="card-title text-subtitle">{{structure.StructureName}}</h6>
+            <p class="card-text text-subtitle">Stock: {{structure.Stock}}</p>
+            <div class="btn-cent">
+                <button class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#structureModal" (click)="structureData()">More</button>
+            </div>
+        </div>
+    </div>
+</div>

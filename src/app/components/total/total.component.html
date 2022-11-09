@@ -1,0 +1,11 @@
+<div class="card mb-3">
+    <div class="card-header d-flex">
+        <div class="container-fluid">
+            <button type="button" class="disabled-btn btn btn-secondary my-2 my-sm-0 disabled">Total: ${{total.getTotal()}}</button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-secondary my-2 my-sm-0" data-bs-toggle="modal" data-bs-target="#paypalModal">Pagar</button>
+        </div>
+    </div>
+</div>
+<app-paypal-modal></app-paypal-modal>

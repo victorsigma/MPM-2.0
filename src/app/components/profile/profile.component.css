@@ -1,0 +1,18 @@
+.content-item {
+    border-left: 20px;
+    border-right: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-data {
+    width: 200%;
+}
+
+.user-icon {
+    text-align: center;
+}
+

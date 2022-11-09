@@ -1,0 +1,34 @@
+<div class="modal" id="loginModal" tabindex="-1"
+aria-labelledby="loginModalLabe1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="isLoginDataTrue()">
+                    <div class="mb-3 form-group">
+                        <label for="Email" class="form-label">Email
+                            address - Username</label>
+                        <input formControlName="user" type="email" class="form-control" type="text" 
+                        id="Email name">
+                        <div id="emailHelp" class="form-text">We'll never share
+                            your
+                            email with anyone else.</div>
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="Password">
+                    </div>
+                    <div class="list-group">
+                        <button type="submit" class="btn button-login" data-bs-dismiss="modal">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div>
+    <div>
+        <nav class="navbar">
+            <div class="container-fluid content-project">
+                <h1>Reglas de juego {{region}}</h1>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="nav navbar-expand-lg nav-pills" id="v-pills-tab"
+            role="tablist" aria-orientation="vertical">
+            <button class="nav-link nav-link-margin active"
+                id="v-pills-baneadas-tab"
+                data-bs-toggle="pill" data-bs-target="#v-pills-baneadas"
+                type="button" role="tab" aria-controls="v-pills-baneadas"
+                aria-selected="false">Baneadas</button>
+            <button class="nav-link nav-link-margin"
+                id="v-pills-limitadas-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-limitadas"
+                type="button" role="tab"
+                aria-controls="v-pills-limitadas"
+                aria-selected="false">Limitadas</button>
+            <button class="nav-link nav-link-margin"
+                id="v-pills-semi-limitadas-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-semi-limitadas"
+                type="button" role="tab"
+                aria-controls="v-pills-semi-limitadas"
+                aria-selected="false">Semi-Limitadas</button>
+        </div>
+    </div>
+</div>
+
+<div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-baneadas"
+        role="tabpanel"
+        aria-labelledby="v-pills-baneadas-tab" tabindex="0">
+        <div class="container-fluid">
+            <app-card-item *ngFor="let card of cardsBan" [card]="card"></app-card-item>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="v-pills-limitadas"
+        role="tabpanel"
+        aria-labelledby="v-pills-limitadas-tab"
+        tabindex="0">
+        <div class="container-fluid">
+            <app-card-item *ngFor="let card of cardsLim" [card]="card"></app-card-item>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-semi-limitadas"
+        role="tabpanel"
+        aria-labelledby="v-pills-semi-limitadas-tab"
+        tabindex="0">
+        <div class="container-fluid">
+            <app-card-item *ngFor="let card of cardsSemLim" [card]="card"></app-card-item>
+        </div>
+    </div>
